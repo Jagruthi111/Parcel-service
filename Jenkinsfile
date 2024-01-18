@@ -1,5 +1,4 @@
-pipeline {
-    agent { label 'slave01' }
+pipeline { agent { label 'slave01' }
 
 environment {
             MAVEN_HOME = tool 'maven'
@@ -16,7 +15,7 @@ stages {
 stage ('Build') {
             steps {
                 script {
-                    sh '${MAVEN_HOME}/bin/mvn clean package'
+                    sh '$MAVEN_HOME/bin/mvn clean package'
                       }
                    }
              }
