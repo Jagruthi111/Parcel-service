@@ -31,5 +31,11 @@ stage('Run Locally') {
             }
         }
     }
+            stage('deploy') {
+            steps { 
+             sh 'ssh root@172.31.2.55'
+             sh 'scp target/simple-parcel-service-app-1.0-SNAPSHOT.jar root@172.31.2.55:/opt/apache-tomcat-8.5.98/webapps/'
+            }
+        }
 }
 }
