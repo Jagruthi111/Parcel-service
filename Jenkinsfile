@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'slave01'}
 
     environment {
         MAVEN_HOME = tool 'maven'
@@ -13,7 +13,7 @@ pipeline {
             sh 'git clone https://github.com/Jagruthi111/Parcel-service/'
                 }
             }
-        }
+    
 
         stage('Build') {
             steps {
