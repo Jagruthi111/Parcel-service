@@ -2,8 +2,8 @@ pipeline {
     agent { label 'slave01'}
 
     environment {
-        MAVEN_HOME = tool 'maven'
-        SPRING_PROFILES_ACTIVE = 'local'  // Set the Spring profile for local development
+        MAVEN_HOME = tool 'Maven'
+        //SPRING_PROFILES_ACTIVE = 'local'  // Set the Spring profile for local development
     }
 
     stages {
