@@ -31,7 +31,8 @@ pipeline {
                     sh "java -jar target/simple-parcel-service-app-1.0-SNAPSHOT.jar &"
 
                     // Sleep for a while to allow the application to start (adjust as needed)
-                    sleep time: 30, unit: 'SECONDS'
+                    //sleep time: 30, unit: 'SECONDS'
+                    sleep 30
                 }
             }
         }
