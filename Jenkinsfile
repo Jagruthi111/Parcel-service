@@ -16,7 +16,7 @@ stages {
 stage ('Build') {
             steps {
                 script {
-                    sh "${MAVEN_HOME}/bin/mvn clean package"
+                    sh '${MAVEN_HOME}/bin/mvn clean package'
                       }
                    }
              }
