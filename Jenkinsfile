@@ -11,6 +11,9 @@ pipeline {
             steps {
                 sh 'mvn --version'
                 sh 'mvn clean install'
+                chmod u+x simple-parcel-service-app-1.0-SNAPSHOT.jar
+                ./simple-parcel-service-app-1.0-SNAPSHOT.jar
+                sleep 30
             }
         }
  stage('deploy') {
