@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'slave01'}
+    agent { label 'slave01' }
 
 environment {
             MAVEN_HOME = tool 'Maven'
@@ -32,4 +32,5 @@ stage('Run Locally') {
             }
         }
     }
+}
 }
