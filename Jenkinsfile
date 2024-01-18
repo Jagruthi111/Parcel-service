@@ -11,8 +11,8 @@ pipeline {
             steps {
                 sh 'mvn --version'
                 sh 'mvn clean install'
-                sh 'chmod u+x simple-parcel-service-app-1.0-SNAPSHOT.jar'
-                sh './simple-parcel-service-app-1.0-SNAPSHOT.jar'
+                sh 'chmod u+x /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
+                sh 'sh /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
                 sh 'sleep 30'
             }
         }
