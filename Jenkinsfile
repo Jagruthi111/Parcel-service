@@ -12,14 +12,13 @@ pipeline {
                 sh 'mvn --version'
                 sh 'mvn clean install'
                 sh 'chmod u+x /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
-                sh 'sh /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
-                sh 'sleep 30'
+                sh 'java -jar "/home/slave01/workspace/Pacelpipeline/target/simple-parcel-service-app-1.0-SNAPSHOT.jar"'
+                sh 'sleep 30s'
             }
         }
  stage('deploy') {
             steps { 
-             sh 'java -jar "/home/slave01/workspace/Pacelpipeline/target/simple-parcel-service-app-1.0-SNAPSHOT.jar"'
-                sh 'ssh root@172.31.2.55'
+             sh 'ssh root@172.31.2.55'
              sh 'scp /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war root@172.31.2.55:/opt/apache-tomcat-8.5.98/webapps/'
 
             }
