@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Run the Spring Boot application locally
-                    sh "java -jar target/simple-parcel-service-app-1.0-SNAPSHOT.jar --spring.profiles.active=${SPRING_PROFILES_ACTIVE} &"
+                    sh "java -jar target/simple-parcel-service-app-1.0-SNAPSHOT.jar &"
 
                     // Sleep for a while to allow the application to start (adjust as needed)
                     sleep time: 30, unit: 'SECONDS'
