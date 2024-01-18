@@ -1,4 +1,4 @@
-pipeline 
+pipeline {
     agent { label 'slave01'}
 
 environment {
@@ -32,3 +32,4 @@ stage('Run Locally') {
             }
         }
     }
+}
