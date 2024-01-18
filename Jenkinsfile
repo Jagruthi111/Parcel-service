@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                
+                sh 'rm -rf Parcel-service'
+            sh 'git clone https://github.com/Jagruthi111/Parcel-service/'
                 }
             }
         }
@@ -35,3 +36,7 @@ pipeline {
             }
         }
 }
+
+
+
+
