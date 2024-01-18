@@ -2,7 +2,7 @@ pipeline {
     agent { label 'slave01' }
 
 environment {
-            MAVEN_HOME = tool 'Maven'
+            MAVEN_HOME = tool 'maven'
             }    
 
 stages {
