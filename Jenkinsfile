@@ -15,7 +15,7 @@ pipeline {
         }
  stage('deploy') {
             steps { 
-             sh 'java -jar /home/slave01/workspace/Parcelpipeline/target/simple-parcel-service-app-1.0-SNAPSHOT.jar'
+             sh 'java -jar workspace/Parcelpipeline/target/simple-parcel-service-app-1.0-SNAPSHOT.jar'
             }
         }
     }
