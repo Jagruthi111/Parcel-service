@@ -9,10 +9,8 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn --version'
-                sh 'mvn clean install'
                 sh 'chmod u+x /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
-                sh 'java -jar "/home/slave01/workspace/Pacelpipeline/target/simple-parcel-service-app-1.0-SNAPSHOT.jar"'
+                sh 'java -jar "target/simple-parcel-service-app-1.0-SNAPSHOT.jar"'
                 sh 'sleep 30s'
             }
         }
