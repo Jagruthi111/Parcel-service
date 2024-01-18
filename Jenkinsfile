@@ -9,7 +9,6 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'chmod u+x /home/slave01/workspace/SamplePipeline/target/hello-world-war-1.0.0.war'
                 sh 'java -jar "target/simple-parcel-service-app-1.0-SNAPSHOT.jar"'
                 sh 'sleep 30s'
             }
