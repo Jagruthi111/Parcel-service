@@ -15,15 +15,23 @@ pipeline {
             }
     
 
-        stage('Build') {
+        // stage('Build') {
+        //     steps {
+        //         script {
+        //             // Build the Spring Boot application
+        //             sh "${MAVEN_HOME}/bin/mvn clean package"
+        //         }
+        //     }
+        // }
+        
+ stage('Build') {
             steps {
                 script {
-                    // Build the Spring Boot application
-                    sh "${MAVEN_HOME}/bin/mvn clean package"
+                    buildJob 'package'
                 }
             }
         }
-
+        
         stage('Run Locally') {
             steps {
                 script {
