@@ -1,3 +1,5 @@
+@Library('myLib') _
+
 pipeline {
     agent { label 'slave01'}
 
